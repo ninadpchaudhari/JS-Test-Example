@@ -1,0 +1,32 @@
+image: node:10.16.3-jessie
+
+
+before_script:
+  - npm install
+  
+send:
+  stage: deploy
+  script:
+  - npm install
+  - npm deploy
+  only:
+  - master
+
+test:
+  stage: test
+  script:
+  - npm install
+  - npm test
+  except:
+  - master
+
+deploy_prod:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+  environment:
+    name: production
+    url: https://example.com
+  when: manual
+  only:
+  - master

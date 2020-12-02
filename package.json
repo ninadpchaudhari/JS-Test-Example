@@ -1,0 +1,25 @@
+{
+  "name": "proj1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.1",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --exit",
+    "deploy": "echo 'done'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.rit.albany.edu/nc731749/proj1.git"
+  },
+  "author": "Ninad",
+  "license": "ISC"
+}
